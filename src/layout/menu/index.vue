@@ -22,8 +22,12 @@
         :key="subItem.id"
         :index="'/' + subItem.path"
         @click="handleClick(subItem.path)"
-        >{{ $t(`menus.${subItem.path}`) }}</el-menu-item
       >
+        <template slot="title">
+          <i class="el-icon-menu"></i>
+          <span> {{ $t(`menus.${subItem.path}`) }}</span>
+        </template>
+      </el-menu-item>
     </el-submenu>
   </el-menu>
 </template>
